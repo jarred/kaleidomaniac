@@ -1,0 +1,116 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+html {
+  background: #111;
+  font-family: "Helvetica Neue", Sans-Serif;
+  font-size: 12px;
+  font-weight: 600; }
+
+.hide {
+  display: none !important; }
+
+a {
+  color: #FFF;
+  text-decoration: none; }
+
+div#preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
+  background: black url("http://localhost:4104/images/preloader.gif") no-repeat center center; }
+
+div#images {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1; }
+  div#images div.cell {
+    position: absolute;
+    overflow: hidden; }
+    div#images div.cell img {
+      position: absolute; }
+    div#images div.cell.flip-x {
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: fliph;
+      /*IE*/ }
+    div#images div.cell.flip-y img {
+      -moz-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: flipv;
+      /*IE*/ }
+
+div#top {
+  position: fixed;
+  z-index: 100;
+  font-style: italic; }
+  div#top .top.left {
+    position: absolute;
+    left: 6px;
+    top: 6px; }
+
+a.name {
+  display: block;
+  width: 293px;
+  height: 132px;
+  background: url("http://localhost:4104/images/logo.png") no-repeat top left; }

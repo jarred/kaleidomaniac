@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Kalediomaniac</title>
+	<link rel="stylesheet" href="http://kaleidomaniac.github.com/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+</head>
+<body>
+  <div id="preloader"></div>
+	<div id="images">
+	  {block:Posts}
+	   {block:Photo}
+   		<div class="post extend" data-view="PostView" data-image="{PhotoURL-500}">
+        
+   		</div>
+	   {/block:Photo}
+	  {/block:Posts}
+	</div>
+	<div id="top">
+		<div class="top left">
+			<a href="/" class="name"></a>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/underscore-min.js"></script>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/backbone-min.js"></script>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/views.post.js"></script>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/views.cell.js"></script>
+	<script type="text/javascript" src="http://kaleidomaniac.github.com/js/main.js"></script>
+	<script type="text/javascript" charset="utf-8">
+    window.Kelido.data = {
+      totalPages: {TotalPages}
+    }
+    window.Kelido.app.init();
+	</script>
+</body>
+</html>

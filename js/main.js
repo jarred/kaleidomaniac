@@ -5,7 +5,8 @@
   kelido.app = {};
   kelido.app.init = function() {
     if (window.location.pathname === '/') {
-      console.log(kelido.data.totalPages);
+      window.location.pathname = '/page/' + Math.ceil(Math.random() * kelido.data.totalPages);
+      return;
     }
     this.extendViews();
     $(window).unload(__bind(function() {

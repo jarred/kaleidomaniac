@@ -23,7 +23,7 @@ div#preloader{
   right: 0px;
   bottom: 0px;
   z-index: 10;
-  background: #000 url('http://localhost:4104/images/preloader.gif') no-repeat center center;
+  background: #000 url('../images/preloader.gif') no-repeat center center;
 }
 
 div#images{
@@ -73,5 +73,5 @@ a.name{
   display: block;
   width: 293px;
   height: 132px;
-  background: url('http://localhost:4104/images/logo.png') no-repeat top left;
+  background: url('../images/logo.png') no-repeat top left;
 }

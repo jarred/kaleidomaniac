@@ -71,7 +71,7 @@ div#preloader {
   right: 0px;
   bottom: 0px;
   z-index: 10;
-  background: black url("http://localhost:4104/images/preloader.gif") no-repeat center center; }
+  background: black url("../images/preloader.gif") no-repeat center center; }
 
 div#images {
   position: fixed;
@@ -113,4 +113,4 @@ a.name {
   display: block;
   width: 293px;
   height: 132px;
-  background: url("http://localhost:4104/images/logo.png") no-repeat top left; }
+  background: url("../images/logo.png") no-repeat top left; }

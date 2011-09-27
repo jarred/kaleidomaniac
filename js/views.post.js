@@ -18,11 +18,9 @@
       this.$('.image-load').append(this.img);
     },
     imageLoaded: function() {
-      console.log('imageLoaded');
       this.width = $(this.img).width();
       this.height = $(this.img).height();
       this.$('.image-load').remove();
-      console.log(this.width, this.height);
       this.render();
     },
     render: function() {

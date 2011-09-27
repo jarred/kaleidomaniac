@@ -19,11 +19,9 @@ kelido.views.PostView = Backbone.View.extend
     return
     
   imageLoaded: () ->
-    console.log 'imageLoaded'
     @width = $(@img).width()
     @height = $(@img).height()
     @$('.image-load').remove()
-    console.log @width, @height
     @render()
     return
     

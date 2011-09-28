@@ -24,3 +24,5 @@ kelido.app.extendViews = () ->
       $node.removeClass('extend')
     return
   return
+
+kelido.app.init()

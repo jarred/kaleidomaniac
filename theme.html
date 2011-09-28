@@ -24,26 +24,22 @@
 	</div>
 	<script src="http://www.boxjs.com/box.js"></script>
 	<script type="text/javascript" charset="utf-8">
-	 Box('http://jarred.github.com/kaleidomaniac/js/', [
+  window.Kelido.data = {
+    totalPages: {TotalPages}
+  }
+  Box('http://jarred.github.com/kaleidomaniac/js/', [
     'jquery.min.js',
     'underscore-min.js',
     'backbone-min.js',
     //
     'views.post.js',
     'views.cell.js',
-   ], {
-     minify: false,
-     version: '0.1',
-     dev: true
+    'main.js'
+  ], {
+    minify: true,
+    version: '0.2',
+    dev: false
   });
-	</script>
-	
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/main.js"></script>
-	<script type="text/javascript" charset="utf-8">
-    window.Kelido.data = {
-      totalPages: {TotalPages}
-    }
-    window.Kelido.app.init();
 	</script>
 </body>
 </html>

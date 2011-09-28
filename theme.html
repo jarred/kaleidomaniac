@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -22,11 +22,22 @@
 			<a href="/" class="name"></a>
 		</div>
 	</div>
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/jquery.min.js"></script>
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/underscore-min.js"></script>
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/backbone-min.js"></script>
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/views.post.js"></script>
-	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/views.cell.js"></script>
+	<script src="http://www.boxjs.com/box.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	 Box('http://jarred.github.com/kaleidomaniac/js/', [
+    'jquery.min.js',
+    'underscore-min.js',
+    'backbone-min.js',
+    //
+    'views.post.js',
+    'views.cell.js',
+   ], {
+     minify: false,
+     version: '0.1',
+     dev: true
+  });
+	</script>
+	
 	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/main.js"></script>
 	<script type="text/javascript" charset="utf-8">
     window.Kelido.data = {

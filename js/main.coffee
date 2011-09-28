@@ -25,4 +25,6 @@ kelido.app.extendViews = () ->
     return
   return
 
-kelido.app.init()
+$(document).bind 'ready', () =>
+	kelido.app.init()
+	return

@@ -24,9 +24,11 @@
 	</div>
 	<script src="http://www.boxjs.com/box.js"></script>
 	<script type="text/javascript" charset="utf-8">
-  window.Kelido.data = {
-    totalPages: {TotalPages}
-  }
+  window.Kelido = {
+    data: {
+      totalPages: {TotalPages}      
+    }
+  };
   Box('http://jarred.github.com/kaleidomaniac/js/', [
     'jquery.min.js',
     'underscore-min.js',
@@ -37,8 +39,8 @@
     'main.js'
   ], {
     minify: true,
-    version: '0.2',
-    dev: false
+    version: '0.3',
+    dev: true
   });
 	</script>
 </body>

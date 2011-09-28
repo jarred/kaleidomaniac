@@ -28,5 +28,7 @@
       }
     }, this));
   };
-  kelido.app.init();
+  $(document).bind('ready', __bind(function() {
+    kelido.app.init();
+  }, this));
 }).call(this);

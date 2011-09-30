@@ -134,3 +134,7 @@ a.name {
   width: 113px;
   height: 52px;
   background: url("../images/logo.png") no-repeat top left; }
+
+iframe#tumblr_controls {
+  right: 15px !important;
+  top: 15px !important; }

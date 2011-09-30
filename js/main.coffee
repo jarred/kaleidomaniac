@@ -2,10 +2,6 @@ kelido = window.Kelido ||= {}
 kelido.app = {}
 
 kelido.app.init = () ->
-  if window.location.pathname is '/'
-    # console.log kelido.data.totalPages
-    window.location.pathname = '/page/' + Math.ceil(Math.random()*kelido.data.totalPages)
-    return
   @extendViews()
   $(window).unload () =>
     $('#preloader').removeClass('hide').animate

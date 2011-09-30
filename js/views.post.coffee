@@ -5,7 +5,7 @@ kelido.views.PostView = Backbone.View.extend
   margin: 10
   
   events:
-    'click img': 'randomPost'
+    'click img': 'nextPost'
 
   initialize: (options) ->
     _.bindAll @, 'imageLoaded'
@@ -52,7 +52,8 @@ kelido.views.PostView = Backbone.View.extend
       return
     return    
     
-  randomPost: (e) ->
+  nextPost: (e) ->
     e.preventDefault()
-    window.location.pathname = '/page/' + Math.ceil(Math.random()*kelido.data.totalPages)
+    # window.location.pathname = '/page/' + Math.ceil(Math.random()*kelido.data.totalPages)
+    window.location = @$el.data('next')
     return

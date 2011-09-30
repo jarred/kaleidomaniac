@@ -28,5 +28,4 @@
       }
     }, this));
   };
-  kelido.app.init();
 }).call(this);

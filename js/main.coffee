@@ -24,7 +24,3 @@ kelido.app.extendViews = () ->
       $node.removeClass('extend')
     return
   return
-
-$(document).bind 'ready', () =>
-	kelido.app.init()
-	return

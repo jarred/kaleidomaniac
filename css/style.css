@@ -106,11 +106,11 @@ div#top {
   font-style: italic; }
   div#top .top.left {
     position: absolute;
-    left: 6px;
-    top: 6px; }
+    left: 10px;
+    top: 10px; }
 
 a.name {
   display: block;
-  width: 293px;
-  height: 132px;
+  width: 113px;
+  height: 52px;
   background: url("../images/logo.png") no-repeat top left; }

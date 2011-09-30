@@ -53,7 +53,7 @@
     },
     nextPost: function(e) {
       e.preventDefault();
-      if (kaleido.data.previousPost != null) {
+      if (kaleido.data.previousPost !== '') {
         window.location = kaleido.data.previousPost;
       } else {
         window.location = '/archive';

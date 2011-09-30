@@ -54,7 +54,7 @@ kaleido.views.PostView = Backbone.View.extend
     
   nextPost: (e) ->
     e.preventDefault()
-    if kaleido.data.previousPost?
+    if kaleido.data.previousPost != ''
       window.location = kaleido.data.previousPost
     else
       window.location = '/archive'

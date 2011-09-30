@@ -8,7 +8,15 @@
 	<script type="text/javascript" charset="utf-8">
   window.Kelido ={
     data: {
-      totalPages: {TotalPages}
+      totalPages: {TotalPages},
+      posts: [{block:Posts}'{PostID}',{/block:Posts}''],
+      {block:Posts}
+      {block:PermalinkPagination}
+      previousPost: '{PreviousPost}',
+      nextPost: '{NextPost}',
+      {/block:PermalinkPagination}
+      {/block:Posts}
+      end: true
     }
   }
 	</script>
@@ -19,8 +27,10 @@
 	  {block:Posts}
 	   {block:Photo}
    		<div class="post extend" data-view="PostView" data-image="{PhotoURL-500}" data-permalink="{Permalink}" {block:PermalinkPagination}{block:PreviousPost}data-next="{PreviousPost}"{/block:PreviousPost}{/block:PermalinkPagination}></div>
+   		{block:Caption}
+   		  <div class="caption">{Caption}</div>   		
+   		{/block:Caption}
 	   {/block:Photo}
-	   
 	  {/block:Posts}
 	</div>
 	<div id="top">
@@ -28,6 +38,12 @@
 			<a href="/" class="name"></a>
 		</div>
 	</div>
+  <script type="text/javascript" charset="utf-8">
+  if (window.location.pathname === '/') {
+    window.location = "/post/" + kelido.data.posts[0];
+    return;
+  }
+  </script>
 	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/require.js"></script>
 	<script type="text/javascript" charset="utf-8">
   (function() {
@@ -38,15 +54,25 @@
       baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
     });
     require(['jquery.min', 'underscore-min'], function() {
-      if (window.location.pathname === '/') {
-        window.location = $('.post').data('permalink');
-      } else {
-        require(['backbone-min', 'views.cell', 'views.post', 'main'], function() {
-          kelido.app.init();
-        });
-      }
+      require(['backbone-min', 'views.cell', 'views.post', 'main'], function() {
+        kelido.app.init();
+      });
     });
   }).call(this);
 	</script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4516491-27']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>	
 </body>
 </html>

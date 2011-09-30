@@ -9,7 +9,7 @@
     data: {
       totalPages: {TotalPages}
     }
-  }
+  };
 	</script>
 </head>
 <body>
@@ -19,7 +19,6 @@
 	   {block:Photo}
    		<div class="post extend" data-view="PostView" data-image="{PhotoURL-500}" data-permalink="{Permalink}" {block:PermalinkPagination}{block:PreviousPost}data-next="{PreviousPost}"{/block:PreviousPost}{/block:PermalinkPagination}></div>
 	   {/block:Photo}
-	   
 	  {/block:Posts}
 	</div>
 	<div id="top">

@@ -54,8 +54,9 @@ legend {
 html {
   background: #111;
   font-family: "Helvetica Neue", Sans-Serif;
-  font-size: 12px;
-  font-weight: 600; }
+  font-size: 11px;
+  font-weight: 500;
+  color: #FFF; }
 
 .hide {
   display: none !important; }
@@ -73,6 +74,13 @@ div#preloader {
   z-index: 10;
   background: black url("../images/preloader.gif") no-repeat center center; }
 
+p a,
+div a {
+  text-decoration: underline; }
+  p a:hover,
+  div a:hover {
+    text-decoration: none; }
+
 div#images {
   position: fixed;
   left: 0px;
@@ -80,6 +88,12 @@ div#images {
   right: 0px;
   bottom: 0px;
   z-index: 1; }
+  div#images div.caption {
+    position: absolute;
+    z-index: 4;
+    right: 20px;
+    bottom: 20px;
+    color: #FFF; }
   div#images div.cell {
     position: absolute;
     overflow: hidden; }
@@ -100,14 +114,20 @@ div#images {
       filter: flipv;
       /*IE*/ }
 
-div#top {
-  position: fixed;
+div#top .top.left {
+  position: absolute;
   z-index: 100;
-  font-style: italic; }
-  div#top .top.left {
-    position: absolute;
-    left: 10px;
-    top: 10px; }
+  left: 17px;
+  top: 20px; }
+div#top p.ctrls {
+  z-index: 100;
+  position: fixed;
+  left: 20px;
+  bottom: 20px; }
+div#top p.about {
+  width: 100px;
+  margin-left: 3px;
+  margin-top: 10px; }
 
 a.name {
   display: block;

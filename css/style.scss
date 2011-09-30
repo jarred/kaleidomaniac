@@ -3,8 +3,9 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 html{
   background: #111;
   font-family: "Helvetica Neue", Sans-Serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
+  color: #FFF;
 }
 
 .hide{
@@ -25,6 +26,13 @@ div#preloader{
   z-index: 10;
   background: #000 url('../images/preloader.gif') no-repeat center center;
 }
+p a,
+div a{
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
 
 div#images{
   position: fixed;
@@ -33,6 +41,13 @@ div#images{
   right: 0px;
   bottom: 0px;
   z-index: 1;
+  div.caption{
+    position: absolute;
+    z-index: 4;
+    right: 20px;
+    bottom: 20px;
+    color: #FFF;
+  }
   div.cell{
     position: absolute;
     overflow: hidden;
@@ -59,13 +74,22 @@ div#images{
 }
 
 div#top{
-  position: fixed;
-  z-index: 100;
-  font-style: italic;
   .top.left{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    z-index: 100;    
+    left: 17px;
+    top: 20px;
+  }
+  p.ctrls{
+    z-index: 100;    
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+  }
+  p.about{
+    width: 100px;
+    margin-left: 3px;
+    margin-top: 10px;
   }
 }
 

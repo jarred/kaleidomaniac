@@ -11,7 +11,9 @@ require.config
 #   return
   
 require ['jquery.min', 'underscore-min'], () ->
-  require ['backbone-min', 'views.cell', 'views.post', 'main'], () ->
-    kelido.app.init()
+  require ['backbone-min'], () ->
+    require ['views.cell', 'views.post', 'main'], () ->
+      kelido.app.init()      
+      return
     return
   return

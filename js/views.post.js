@@ -1,7 +1,7 @@
 (function() {
   var kaleido;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  kaleido = window.kaleido || (window.kaleido = {});
+  kaleido = window.Kaleido || (window.Kaleido = {});
   kaleido.views || (kaleido.views = {});
   kaleido.views.PostView = Backbone.View.extend({
     margin: 10,

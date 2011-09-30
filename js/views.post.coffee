@@ -1,4 +1,4 @@
-kaleido = window.kaleido ||= {}
+kaleido = window.Kaleido ||= {}
 kaleido.views ||= {}
 
 kaleido.views.PostView = Backbone.View.extend

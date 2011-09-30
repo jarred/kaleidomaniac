@@ -1,14 +1,14 @@
 (function() {
-  var kelido;
-  kelido = window.Kelido || (window.Kelido = {});
-  kelido.app = {};
+  var kaleido;
+  kaleido = window.Kaleido || (window.Kaleido = {});
+  kaleido.app = {};
   require.config({
     baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
   });
   require(['jquery.min', 'underscore-min'], function() {
     require(['backbone-min'], function() {
       require(['views.cell', 'views.post', 'main'], function() {
-        kelido.app.init();
+        kaleido.app.init();
       });
     });
   });

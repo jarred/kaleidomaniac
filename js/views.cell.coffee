@@ -1,7 +1,7 @@
-kelido = window.Kelido ||= {}
-kelido.views ||= {}
+kaleido = window.Kaleido ||= {}
+kaleido.views ||= {}
 
-kelido.views.CellView = Backbone.View.extend
+kaleido.views.CellView = Backbone.View.extend
   speed: 400
   
   initialize: (options) ->

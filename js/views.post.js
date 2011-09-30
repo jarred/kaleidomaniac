@@ -1,9 +1,9 @@
 (function() {
-  var kelido;
+  var kaleido;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  kelido = window.Kelido || (window.Kelido = {});
-  kelido.views || (kelido.views = {});
-  kelido.views.PostView = Backbone.View.extend({
+  kaleido = window.kaleido || (window.kaleido = {});
+  kaleido.views || (kaleido.views = {});
+  kaleido.views.PostView = Backbone.View.extend({
     margin: 10,
     events: {
       'click img': 'nextPost'
@@ -31,7 +31,7 @@
       while (row < down) {
         column = 0;
         while (column < across) {
-          cell = new kelido.views.CellView({
+          cell = new kaleido.views.CellView({
             width: this.width - this.margin,
             height: this.height - this.margin,
             margin: this.margin,
@@ -53,7 +53,11 @@
     },
     nextPost: function(e) {
       e.preventDefault();
-      window.location = this.$el.data('next');
+      if (kaleido.data.nextPost != null) {
+        window.location = kaleido.data.nextPost;
+      } else {
+        window.location = '/archive';
+      }
     }
   });
 }).call(this);

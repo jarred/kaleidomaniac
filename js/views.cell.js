@@ -1,8 +1,8 @@
 (function() {
-  var kelido;
-  kelido = window.Kelido || (window.Kelido = {});
-  kelido.views || (kelido.views = {});
-  kelido.views.CellView = Backbone.View.extend({
+  var kaleido;
+  kaleido = window.Kaleido || (window.Kaleido = {});
+  kaleido.views || (kaleido.views = {});
+  kaleido.views.CellView = Backbone.View.extend({
     speed: 400,
     initialize: function(options) {
       this.$el = $(this.el);

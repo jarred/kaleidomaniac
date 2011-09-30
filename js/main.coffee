@@ -1,7 +1,7 @@
-kelido = window.Kelido ||= {}
-kelido.app = {}
+kaleido = window.Kaleido ||= {}
+kaleido.app = {}
 
-kelido.app.init = () ->
+kaleido.app.init = () ->
   @extendViews()
   $(window).unload () =>
     $('#preloader').removeClass('hide').animate
@@ -10,12 +10,12 @@ kelido.app.init = () ->
     return
   return
   
-kelido.app.extendViews = () ->
+kaleido.app.extendViews = () ->
   _.each $('.extend'), (node) =>
     $node = $(node)
     name = $node.data('view')
-    if kelido.views[name]?
-      view = new kelido.views[name]
+    if kaleido.views[name]?
+      view = new kaleido.views[name]
         el: node
       $node.removeClass('extend')
     return

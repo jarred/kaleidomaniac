@@ -1,5 +1,5 @@
-kelido = window.Kelido ||= {}
-kelido.app = {}
+kaleido = window.Kaleido ||= {}
+kaleido.app = {}
 
 require.config
   # baseUrl: 'http://localhost:4104/js/'
@@ -7,13 +7,13 @@ require.config
   # urlArgs: "bust=#{new Date().getTime()}"
   
 # if window.location.pathname is '/'
-#   window.location = "/post/#{kelido.data.posts[0]}"
+#   window.location = "/post/#{kaleido.data.posts[0]}"
 #   return
   
 require ['jquery.min', 'underscore-min'], () ->
   require ['backbone-min'], () ->
     require ['views.cell', 'views.post', 'main'], () ->
-      kelido.app.init()      
+      kaleido.app.init()      
       return
     return
   return

@@ -1,7 +1,7 @@
-kelido = window.Kelido ||= {}
-kelido.views ||= {}
+kaleido = window.kaleido ||= {}
+kaleido.views ||= {}
 
-kelido.views.PostView = Backbone.View.extend
+kaleido.views.PostView = Backbone.View.extend
   margin: 10
   
   events:
@@ -33,7 +33,7 @@ kelido.views.PostView = Backbone.View.extend
     while row < down
       column = 0
       while column < across
-        cell = new kelido.views.CellView
+        cell = new kaleido.views.CellView
           width: @width-@margin
           height: @height-@margin
           margin: @margin
@@ -54,6 +54,8 @@ kelido.views.PostView = Backbone.View.extend
     
   nextPost: (e) ->
     e.preventDefault()
-    # window.location.pathname = '/page/' + Math.ceil(Math.random()*kelido.data.totalPages)
-    window.location = @$el.data('next')
+    if kaleido.data.nextPost?
+      window.location = kaleido.data.nextPost
+    else
+      window.location = '/archive'
     return

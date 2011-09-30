@@ -2,6 +2,9 @@
   var kelido;
   kelido = window.Kelido || (window.Kelido = {});
   kelido.app = {};
+  require.config({
+    baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+  });
   require(['jquery.min', 'underscore-min'], function() {
     if (window.location.pathname === '/') {
       window.location = $('.post').data('permalink');

@@ -26,10 +26,25 @@
 			<a href="/" class="name"></a>
 		</div>
 	</div>
-	<!-- 
-	http://jarred.github.com/kaleidomaniac/
-	http://localhost:4104/
-	-->
-	<script type="text/javascript" data-main="http://jarred.github.com/kaleidomaniac/js/loader.js" src="http://jarred.github.com/kaleidomaniac/js/require.js"></script>
+	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/require.js"></script>
+	<script type="text/javascript" charset="utf-8">
+  (function() {
+    var kelido;
+    kelido = window.Kelido || (window.Kelido = {});
+    kelido.app = {};
+    require.config({
+      baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+    });
+    require(['jquery.min', 'underscore-min'], function() {
+      if (window.location.pathname === '/') {
+        window.location = $('.post').data('permalink');
+      } else {
+        require(['backbone-min', 'views.cell', 'views.post', 'main'], function() {
+          kelido.app.init();
+        });
+      }
+    });
+  }).call(this);
+	</script>
 </body>
 </html>

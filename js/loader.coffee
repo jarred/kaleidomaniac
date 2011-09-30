@@ -1,6 +1,10 @@
 kelido = window.Kelido ||= {}
 kelido.app = {}
 
+require.config
+  # baseUrl: 'http://localhost:4104/js/'
+  baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+
 require ['jquery.min', 'underscore-min'], () ->
   if window.location.pathname is '/'
     window.location = $('.post').data('permalink')

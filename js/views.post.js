@@ -6,7 +6,7 @@
   kelido.views.PostView = Backbone.View.extend({
     margin: 10,
     events: {
-      'click img': 'randomPost'
+      'click img': 'nextPost'
     },
     initialize: function(options) {
       _.bindAll(this, 'imageLoaded');
@@ -51,9 +51,9 @@
         $('#preloader').addClass('hide');
       }, this));
     },
-    randomPost: function(e) {
+    nextPost: function(e) {
       e.preventDefault();
-      window.location.pathname = '/page/' + Math.ceil(Math.random() * kelido.data.totalPages);
+      window.location = this.$el.data('next');
     }
   });
 }).call(this);

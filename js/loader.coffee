@@ -2,8 +2,8 @@ kaleido = window.Kaleido ||= {}
 kaleido.app = {}
 
 require.config
-  # baseUrl: 'http://localhost:4104/js/'
-  baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+  baseUrl: 'http://localhost:4104/js/'
+  # baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
   # urlArgs: "bust=#{new Date().getTime()}"
   
 # if window.location.pathname is '/'

@@ -3,7 +3,7 @@
   kaleido = window.Kaleido || (window.Kaleido = {});
   kaleido.app = {};
   require.config({
-    baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+    baseUrl: 'http://localhost:4104/js/'
   });
   require(['jquery.min', 'underscore-min'], function() {
     require(['backbone-min'], function() {

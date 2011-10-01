@@ -3,13 +3,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Kalediomaniac</title>
-  <link rel="stylesheet" href="http://jarred.github.com/kaleidomaniac/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-  <!-- <link rel="stylesheet" href="http://localhost:4104/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/> -->
+  <!-- <link rel="stylesheet" href="http://jarred.github.com/kaleidomaniac/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/> -->
+  <link rel="stylesheet" href="http://localhost:4104/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 	<script type="text/javascript" charset="utf-8">
   window.Kaleido ={
     data: {
       totalPages: {TotalPages},
-      posts: [{block:Posts}'{PostID}',{/block:Posts}''],
+      posts: [{block:Posts}{
+        id: '{PostID}',
+        permalink: '{Permalink}',
+        tags: [{block:HasTags}{block:Tags}'{Tag}',{/block:Tags}{/block:HasTags}]
+      },{/block:Posts}],
       {block:Posts}
       {block:PermalinkPagination}
       previousPost: '{PreviousPost}',
@@ -20,7 +24,7 @@
     }
   };
   if (window.location.pathname === '/') {
-    window.location = "/post/" + window.Kaleido.data.posts[0];
+    window.location = window.Kaleido.data.posts[0].permalink;
   }
 	</script>
 </head>
@@ -50,7 +54,8 @@
     kaleido = window.Kaleido || (window.Kaleido = {});
     kaleido.app = {};
     require.config({
-      baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+      // baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+      baseUrl: 'http://localhost:4104/js/'
     });
     require(['jquery.min', 'underscore-min'], function() {
       require(['backbone-min'], function() {

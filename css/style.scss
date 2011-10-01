@@ -8,6 +8,10 @@ html{
   color: #FFF;
 }
 
+body.dark-ui{
+  color: #000;
+}
+
 .hide{
   display: none !important;
 }
@@ -15,6 +19,9 @@ html{
 a{
   color:#FFF;
   text-decoration: none;
+  body.dark-ui &{
+    color: #000;
+  }
 }
 
 div#preloader{
@@ -47,6 +54,9 @@ div#images{
     right: 20px;
     bottom: 20px;
     color: #FFF;
+    body.dark-ui &{
+      color: #000;
+    }
   }
   div.cell{
     position: absolute;
@@ -98,6 +108,9 @@ a.name{
   width: 113px;
   height: 52px;
   background: url('../images/logo.png') no-repeat top left;
+  body.dark-ui &{
+    background: url('../images/logo.dark.png') no-repeat top left;    
+  }
 }
 
 iframe#tumblr_controls{

@@ -58,12 +58,17 @@ html {
   font-weight: 500;
   color: #FFF; }
 
+body.dark-ui {
+  color: #000; }
+
 .hide {
   display: none !important; }
 
 a {
   color: #FFF;
   text-decoration: none; }
+  body.dark-ui a {
+    color: #000; }
 
 div#preloader {
   position: fixed;
@@ -94,6 +99,8 @@ div#images {
     right: 20px;
     bottom: 20px;
     color: #FFF; }
+    body.dark-ui div#images div.caption {
+      color: #000; }
   div#images div.cell {
     position: absolute;
     overflow: hidden; }
@@ -134,6 +141,8 @@ a.name {
   width: 113px;
   height: 52px;
   background: url("../images/logo.png") no-repeat top left; }
+  body.dark-ui a.name {
+    background: url("../images/logo.dark.png") no-repeat top left; }
 
 iframe#tumblr_controls {
   right: 15px !important;

@@ -10,10 +10,14 @@
     },
     initialize: function(options) {
       _.bindAll(this, 'imageLoaded');
+      this.model = new Backbone.Model(kaleido.data.posts[0]);
+      _.each(this.model.get('tags'), __bind(function(tag) {
+        $('body').addClass(tag);
+      }, this));
       this.$el = $(this.el);
       this.img = new Image();
       this.img.src = this.$el.data('image');
-      this.$el.append("<div class=\"image-load\"></p>");
+      this.$el.append("<div class=\"image-load\"></div>");
       $(this.img).load(this.imageLoaded);
       this.$('.image-load').append(this.img);
     },

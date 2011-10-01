@@ -9,13 +9,16 @@ kaleido.views.PostView = Backbone.View.extend
 
   initialize: (options) ->
     _.bindAll @, 'imageLoaded'
+    @model = new Backbone.Model kaleido.data.posts[0]
+    _.each @model.get('tags'), (tag) =>
+      $('body').addClass(tag)
+      return
     @$el = $(@el)
     @img = new Image()
     @img.src = @$el.data('image')
-    @$el.append("<div class=\"image-load\"></p>")
+    @$el.append("<div class=\"image-load\"></div>")
     $(@img).load @imageLoaded
     @$('.image-load').append(@img)
-    # @$('.image-load').fadeTo(0, 0)
     return
     
   imageLoaded: () ->

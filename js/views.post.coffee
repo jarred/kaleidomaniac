@@ -4,9 +4,6 @@ kaleido.views ||= {}
 kaleido.views.PostView = Backbone.View.extend
   margin: 10
   
-  events:
-    'click img': 'nextPost'
-
   initialize: (options) ->
     _.bindAll @, 'imageLoaded'
     @model = new Backbone.Model kaleido.data.posts[0]
@@ -53,12 +50,10 @@ kaleido.views.PostView = Backbone.View.extend
     , 300, () =>
       $('#preloader').addClass('hide')
       return
-    return    
-    
-  nextPost: (e) ->
-    e.preventDefault()
+      
     if kaleido.data.previousPost != ''
-      window.location = kaleido.data.previousPost
+      url = kaleido.data.previousPost
     else
-      window.location = '/archive'
+      url = '/archive'
+    @$el.append("<a class=\"link\" href=\"#{url}\"></a>")
     return

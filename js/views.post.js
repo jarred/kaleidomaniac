@@ -5,9 +5,6 @@
   kaleido.views || (kaleido.views = {});
   kaleido.views.PostView = Backbone.View.extend({
     margin: 10,
-    events: {
-      'click img': 'nextPost'
-    },
     initialize: function(options) {
       _.bindAll(this, 'imageLoaded');
       this.model = new Backbone.Model(kaleido.data.posts[0]);
@@ -28,7 +25,7 @@
       this.render();
     },
     render: function() {
-      var across, cell, column, down, row;
+      var across, cell, column, down, row, url;
       across = Math.ceil($(window).width() / (this.width - this.margin));
       down = Math.ceil($(window).height() / (this.height - this.margin));
       row = 0;
@@ -54,14 +51,12 @@
       }, 300, __bind(function() {
         $('#preloader').addClass('hide');
       }, this));
-    },
-    nextPost: function(e) {
-      e.preventDefault();
       if (kaleido.data.previousPost !== '') {
-        window.location = kaleido.data.previousPost;
+        url = kaleido.data.previousPost;
       } else {
-        window.location = '/archive';
+        url = '/archive';
       }
+      this.$el.append("<a class=\"link\" href=\"" + url + "\"></a>");
     }
   });
 }).call(this);

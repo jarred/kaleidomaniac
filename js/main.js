@@ -4,12 +4,10 @@
   kaleido = window.Kaleido || (window.Kaleido = {});
   kaleido.app = {};
   kaleido.app.init = function() {
+    this.appView = new kaleido.views.AppView({
+      el: $('body')
+    });
     this.extendViews();
-    $(window).unload(__bind(function() {
-      $('#preloader').removeClass('hide').animate({
-        opacity: 1
-      }, 300);
-    }, this));
   };
   kaleido.app.extendViews = function() {
     _.each($('.extend'), __bind(function(node) {

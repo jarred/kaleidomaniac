@@ -2,12 +2,9 @@ kaleido = window.Kaleido ||= {}
 kaleido.app = {}
 
 kaleido.app.init = () ->
+  @appView = new kaleido.views.AppView
+    el: $('body')
   @extendViews()
-  $(window).unload () =>
-    $('#preloader').removeClass('hide').animate
-      opacity: 1
-    , 300
-    return
   return
   
 kaleido.app.extendViews = () ->

@@ -76,7 +76,7 @@ div#preloader {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 10;
+  z-index: 50;
   background: black url("../images/preloader.gif") no-repeat center center; }
 
 p a,
@@ -101,6 +101,15 @@ div#images {
     color: #FFF; }
     body.dark-ui div#images div.caption {
       color: #000; }
+  div#images a.link {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 3;
+    cursor: default; }
   div#images div.cell {
     position: absolute;
     overflow: hidden; }

@@ -30,7 +30,7 @@ div#preloader{
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 10;
+  z-index: 50;
   background: #000 url('../images/preloader.gif') no-repeat center center;
 }
 p a,
@@ -57,6 +57,16 @@ div#images{
     body.dark-ui &{
       color: #000;
     }
+  }
+  a.link{
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 3;
+    cursor: default;
   }
   div.cell{
     position: absolute;

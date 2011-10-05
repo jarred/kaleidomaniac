@@ -127,3 +127,31 @@ iframe#tumblr_controls{
   right: 15px !important;
   top: 15px !important;
 }
+
+div#nsfw{
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: rgba(0,0,0,.96);
+  z-index: 90;
+  div.message{
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    top: 40%;
+    h4{
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+    p{
+      color: #888;
+      a{
+        color: #FFF;
+      }
+    }
+  }
+}

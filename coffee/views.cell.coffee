@@ -30,6 +30,7 @@ kaleido.views.CellView = Backbone.View.extend
     return
     
   animate: () ->
+    return
     if @yIndex%2
       @$('img').animate
         left: 0-@margin

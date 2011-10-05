@@ -11,8 +11,8 @@ require.config
 #   return
   
 require ['jquery.min', 'underscore-min'], () ->
-  require ['backbone-min', 'jquery.easing'], () ->
-    require ['views.cell', 'views.post', 'views.app', 'main'], () ->
+  require ['backbone-min', 'jquery.easing', 'jquery.cookie.min'], () ->
+    require ['views.cell', 'views.post', 'views.app', 'views.nsfw', 'main'], () ->
       kaleido.app.init()      
       return
     return

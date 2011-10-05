@@ -4,12 +4,15 @@
   kaleido = window.Kaleido || (window.Kaleido = {});
   kaleido.views || (kaleido.views = {});
   kaleido.views.PostView = Backbone.View.extend({
-    margin: 10,
+    margin: 0,
     initialize: function(options) {
       _.bindAll(this, 'imageLoaded');
       this.model = new Backbone.Model(kaleido.data.posts[0]);
       _.each(this.model.get('tags'), __bind(function(tag) {
         $('body').addClass(tag);
+        if (tag === 'nsfw') {
+          this.checkForNsfw();
+        }
       }, this));
       this.$el = $(this.el);
       this.img = new Image();
@@ -57,6 +60,15 @@
         url = '/archive';
       }
       this.$el.append("<a class=\"link\" href=\"" + url + "\"></a>");
+    },
+    cookieKey: 'kaleido_0.1',
+    checkForNsfw: function() {
+      var cookie;
+      cookie = JSON.parse($.cookie(this.cookieKey));
+      console.log('cookie', cookie);
+      if (cookie === null) {
+        $('#nsfw').removeClass('hide');
+      }
     }
   });
 }).call(this);

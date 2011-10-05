@@ -6,8 +6,8 @@
     baseUrl: 'http://localhost:4104/js/'
   });
   require(['jquery.min', 'underscore-min'], function() {
-    require(['backbone-min', 'jquery.easing'], function() {
-      require(['views.cell', 'views.post', 'views.app', 'main'], function() {
+    require(['backbone-min', 'jquery.easing', 'jquery.cookie.min'], function() {
+      require(['views.cell', 'views.post', 'views.app', 'views.nsfw', 'main'], function() {
         kaleido.app.init();
       });
     });

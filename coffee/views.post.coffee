@@ -2,13 +2,14 @@ kaleido = window.Kaleido ||= {}
 kaleido.views ||= {}
 
 kaleido.views.PostView = Backbone.View.extend
-  margin: 10
+  margin: 0
   
   initialize: (options) ->
     _.bindAll @, 'imageLoaded'
     @model = new Backbone.Model kaleido.data.posts[0]
     _.each @model.get('tags'), (tag) =>
       $('body').addClass(tag)
+      @checkForNsfw() if tag == 'nsfw'
       return
     @$el = $(@el)
     @img = new Image()
@@ -56,4 +57,14 @@ kaleido.views.PostView = Backbone.View.extend
     else
       url = '/archive'
     @$el.append("<a class=\"link\" href=\"#{url}\"></a>")
+    return
+    
+  cookieKey: 'kaleido_0.1'
+    
+  checkForNsfw: () ->
+    cookie = JSON.parse $.cookie @cookieKey
+    console.log 'cookie', cookie
+    if cookie == null
+      # show nsfw warning...
+      $('#nsfw').removeClass('hide')
     return

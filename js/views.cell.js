@@ -32,6 +32,7 @@
       this.$el.html("<img src=\"" + this.image + "\"/>");
     },
     animate: function() {
+      return;
       if (this.yIndex % 2) {
         this.$('img').animate({
           left: 0 - this.margin,

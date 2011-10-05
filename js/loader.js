@@ -7,7 +7,7 @@
   });
   require(['jquery.min', 'underscore-min'], function() {
     require(['backbone-min', 'jquery.easing', 'jquery.cookie.min'], function() {
-      require(['views.cell', 'views.post', 'views.app', 'views.nsfw', 'main'], function() {
+      require(['views.cell', 'views.post', 'views.app', 'views.nsfw', 'views.video', 'main'], function() {
         kaleido.app.init();
       });
     });

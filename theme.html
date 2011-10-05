@@ -33,11 +33,18 @@
 	<div id="images">
 	  {block:Posts}
 	   {block:Photo}
-   		<div class="post extend" data-view="PostView" data-image="{PhotoURL-500}" data-permalink="{Permalink}" {block:PermalinkPagination}{block:PreviousPost}data-next="{PreviousPost}"{/block:PreviousPost}{/block:PermalinkPagination}></div>
+   		<div class="post extend" data-view="PostView" data-image="{PhotoURL-500}" data-permalink="{Permalink}"></div>
    		{block:Caption}
    		  <div class="caption">{Caption}</div>   		
    		{/block:Caption}
 	   {/block:Photo}
+	   {block:Video}
+	     <div class="post extend" data-view="VideoPostView" data-embed={JSVideo-500} data-permalink="{Permalink}">
+    		{block:Caption}
+    		  <div class="caption">{Caption}</div>   		
+    		{/block:Caption}
+	     </div>
+	   {/block:Video}
 	  {/block:Posts}
 	</div>
 	<div id="top">
@@ -65,7 +72,7 @@
     });
     require(['jquery.min', 'underscore-min', 'json.min'], function() {
       require(['backbone-min', 'jquery.easing', 'jquery.cookie.min'], function() {
-        require(['views.cell', 'views.post', 'views.app', 'views.nsfw', 'main'], function() {
+        require(['views.cell', 'views.post', 'views.app', 'views.nsfw', 'views.video', 'main'], function() {
           kaleido.app.init();
         });
       });

@@ -61,11 +61,10 @@
       }
       this.$el.append("<a class=\"link\" href=\"" + url + "\"></a>");
     },
-    cookieKey: 'kaleido_0.1',
     checkForNsfw: function() {
       var cookie;
-      cookie = JSON.parse($.cookie(this.cookieKey));
-      console.log('cookie', cookie);
+      cookie = JSON.parse($.cookie(kaleido.data.cookieKey));
+      console.log(cookie);
       if (cookie === null) {
         $('#nsfw').removeClass('hide');
       }

@@ -59,11 +59,9 @@ kaleido.views.PostView = Backbone.View.extend
     @$el.append("<a class=\"link\" href=\"#{url}\"></a>")
     return
     
-  cookieKey: 'kaleido_0.1'
-    
   checkForNsfw: () ->
-    cookie = JSON.parse $.cookie @cookieKey
-    console.log 'cookie', cookie
+    cookie = JSON.parse $.cookie kaleido.data.cookieKey
+    console.log cookie
     if cookie == null
       # show nsfw warning...
       $('#nsfw').removeClass('hide')

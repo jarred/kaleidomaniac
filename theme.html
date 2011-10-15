@@ -8,6 +8,7 @@
 	<script type="text/javascript" charset="utf-8">
   window.Kaleido ={
     data: {
+      cookieKey: 'kaleido_0.1',
       totalPages: {TotalPages},
       posts: [{block:Posts}{
         id: '{PostID}',
@@ -54,12 +55,7 @@
 			<p class="ctrls">Click for next, or <a href="/archive">here for the archive</a>.</p>
 		</div>
 	</div>
-	<div id="nsfw" class="extend hide" data-view="NsfwView">
-	 <div class="message">
-	   <h4>This post isn't work safe.</h4>
-	   <p><a href="#" class="always-show">Always show these</a> or <a href="#" class="skip">Skip to the next post</a>.</p>
-	 </div>
-	</div>
+	<div id="nsfw" class="extend hide" data-view="NsfwView"></div>
 	<script type="text/javascript" src="http://jarred.github.com/kaleidomaniac/js/require.js"></script>
 	<script type="text/javascript" charset="utf-8">
   (function() {
@@ -67,8 +63,8 @@
     kaleido = window.Kaleido || (window.Kaleido = {});
     kaleido.app = {};
     require.config({
-      // baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
-      baseUrl: 'http://localhost:4104/js/'
+      baseUrl: 'http://jarred.github.com/kaleidomaniac/js/'
+      // baseUrl: 'http://localhost:4104/js/'
     });
     require(['jquery.min', 'underscore-min', 'json.min'], function() {
       require(['backbone-min', 'jquery.easing', 'jquery.cookie.min'], function() {

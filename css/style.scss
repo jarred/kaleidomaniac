@@ -134,14 +134,14 @@ div#nsfw{
   right: 0px;
   top: 0px;
   bottom: 0px;
-  background: rgba(0,0,0,.96);
+  background: rgba(0,0,0,.90);
   z-index: 90;
   div.message{
     position: absolute;
     text-align: center;
-    width: 300px;
+    width: 400px;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -200px;
     top: 40%;
     h4{
       font-size: 23px;

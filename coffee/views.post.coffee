@@ -2,7 +2,7 @@ kaleido = window.Kaleido ||= {}
 kaleido.views ||= {}
 
 kaleido.views.PostView = Backbone.View.extend
-  margin: 0
+  margin: 6
   
   initialize: (options) ->
     _.bindAll @, 'imageLoaded'

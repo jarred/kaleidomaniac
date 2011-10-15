@@ -4,7 +4,7 @@
   kaleido = window.Kaleido || (window.Kaleido = {});
   kaleido.views || (kaleido.views = {});
   kaleido.views.PostView = Backbone.View.extend({
-    margin: 0,
+    margin: 6,
     initialize: function(options) {
       _.bindAll(this, 'imageLoaded');
       this.model = new Backbone.Model(kaleido.data.posts[0]);

@@ -1,0 +1,188 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+html {
+  background: #111;
+  font-family: "Helvetica Neue", Sans-Serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #FFF; }
+
+body.dark-ui {
+  color: #000; }
+
+.hide {
+  display: none !important; }
+
+a {
+  color: #FFF;
+  text-decoration: none; }
+  body.dark-ui a {
+    color: #000; }
+
+div#preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 50;
+  background: black url("../images/preloader.gif") no-repeat center center; }
+
+p a,
+div a {
+  text-decoration: underline; }
+  p a:hover,
+  div a:hover {
+    text-decoration: none; }
+
+div#images {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1; }
+  div#images div.caption {
+    position: absolute;
+    z-index: 4;
+    right: 20px;
+    bottom: 20px;
+    color: #FFF; }
+    body.dark-ui div#images div.caption {
+      color: #000; }
+  div#images a.link {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 3;
+    cursor: default; }
+  div#images div.cell {
+    position: absolute;
+    overflow: hidden; }
+    div#images div.cell img {
+      position: absolute; }
+    div#images div.cell.flip-x {
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: fliph;
+      /*IE*/ }
+    div#images div.cell.flip-y img {
+      -moz-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: flipv;
+      /*IE*/ }
+
+div#top .top.left {
+  position: absolute;
+  z-index: 100;
+  left: 17px;
+  top: 20px; }
+div#top p.ctrls {
+  z-index: 100;
+  position: fixed;
+  left: 20px;
+  bottom: 20px; }
+div#top p.title {
+  margin-bottom: 20px;
+  margin-left: 3px; }
+div#top p.about {
+  width: 100px;
+  margin-left: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+div#top div.twitter-follow {
+  width: 62px;
+  overflow: hidden; }
+
+a.name {
+  display: block;
+  width: 113px;
+  height: 52px;
+  background: url("../images/logo.png") no-repeat top left; }
+  body.dark-ui a.name {
+    background: url("../images/logo.dark.png") no-repeat top left; }
+
+iframe#tumblr_controls {
+  right: 15px !important;
+  top: 15px !important; }
+
+div#nsfw {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 90; }
+  div#nsfw div.message {
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    top: 40%; }
+    div#nsfw div.message h4 {
+      font-size: 23px;
+      margin-bottom: 10px; }
+    div#nsfw div.message p {
+      color: #888; }
+      div#nsfw div.message p a {
+        color: #FFF; }

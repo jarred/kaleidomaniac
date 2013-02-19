@@ -130,26 +130,24 @@ div#images {
       filter: flipv;
       /*IE*/ }
 
-div#top {
-  display: none; }
-  div#top .top.left {
-    position: absolute;
-    z-index: 100;
-    left: 17px;
-    top: 20px; }
-  div#top p.ctrls {
-    z-index: 100;
-    position: fixed;
-    left: 20px;
-    bottom: 20px; }
-  div#top p.about {
-    width: 100px;
-    margin-left: 3px;
-    margin-top: 10px;
-    margin-bottom: 20px; }
-  div#top div.twitter-follow {
-    width: 62px;
-    overflow: hidden; }
+div#top .top.left {
+  position: absolute;
+  z-index: 100;
+  left: 17px;
+  top: 20px; }
+div#top p.ctrls {
+  z-index: 100;
+  position: fixed;
+  left: 20px;
+  bottom: 20px; }
+div#top p.about {
+  width: 100px;
+  margin-left: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+div#top div.twitter-follow {
+  width: 62px;
+  overflow: hidden; }
 
 a.name {
   display: block;
